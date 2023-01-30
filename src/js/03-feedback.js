@@ -29,8 +29,8 @@ function setFeedbackData() {
   const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
   if (savedData) {
-    userEmail.value = savedData.email;
-    userMsg.value = savedData.message;
+    userEmail.value = savedData.email || '';
+    userMsg.value = savedData.message || '';
   }
 }
 function clearLocalStorage() {
