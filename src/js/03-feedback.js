@@ -21,7 +21,7 @@ form.addEventListener(
 form.addEventListener('submit', e => {
   e.preventDefault();
   e.currentTarget.reset();
-  console.log(localStorage.getItem(STORAGE_KEY));
+  console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
   clearLocalStorage();
 });
 
